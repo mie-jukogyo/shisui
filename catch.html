@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>止水板って、実はチャンス商材。｜ 三重重工業 水門プラント部</title>
+<style>
+  :root{
+    --ink:#15233b;
+    --blue:#2769b3;
+    --teal:#0d9488;
+    --green:#16a34a;
+    --orange:#f5821f;
+    --purple:#7c3aed;
+    --pink:#e0367a;
+    --yellow:#ffd23f;
+    --paper:#fbf7ef;
+    --txt:#1f2733;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0;}
+  body{
+    font-family:"Yu Gothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+    color:var(--txt);background:var(--paper);line-height:1.7;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 18px 60px;}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;color:#fff;text-align:center;
+    padding:64px 22px 70px;overflow:hidden;
+    background:linear-gradient(135deg,#1e3a8a 0%,#2769b3 35%,#0d9488 70%,#16a34a 100%);
+  }
+  .hero .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.25;}
+  .hero .b1{width:200px;height:200px;background:var(--yellow);top:-60px;left:-40px;}
+  .hero .b2{width:160px;height:160px;background:var(--pink);bottom:-50px;right:-30px;opacity:.3;}
+  .hero .kicker{
+    display:inline-block;background:var(--orange);
+    border:2px solid rgba(255,255,255,.85);border-radius:30px;
+    padding:9px 26px;font-size:19px;font-weight:900;letter-spacing:.04em;
+    margin-bottom:20px;position:relative;box-shadow:0 6px 16px rgba(0,0,0,.22);
+  }
+  .hero h1{
+    font-size:38px;line-height:1.3;position:relative;
+    text-shadow:0 2px 10px rgba(0,0,0,.25);font-weight:900;
+  }
+  .hero h1 .hl{color:var(--yellow);}
+  .hero .sub{font-size:16px;margin-top:16px;opacity:.95;position:relative;}
+  /* 作成部署を大きく見せるブロック */
+  .hero .maker{
+    display:inline-block;margin-top:28px;background:#fff;border-radius:20px;
+    padding:16px 30px;position:relative;box-shadow:0 10px 26px rgba(0,0,0,.25);
+  }
+  .hero .maker .lead{font-size:13px;font-weight:bold;color:#888;}
+  .hero .maker .name{font-size:18px;font-weight:bold;color:var(--ink);line-height:1.3;margin-top:2px;}
+  .hero .maker .dept{
+    display:block;font-size:32px;font-weight:900;line-height:1.2;margin-top:2px;
+    background:linear-gradient(120deg,#2769b3,#0d9488);-webkit-background-clip:text;
+    background-clip:text;color:transparent;
+  }
+  .hero .maker .item{font-size:13px;color:#666;margin-top:8px;}
+  .hero .herolink{
+    display:inline-block;margin-top:20px;color:#fff;font-size:15px;font-weight:bold;
+    text-decoration:none;background:rgba(0,0,0,.22);border:1.5px solid rgba(255,255,255,.7);
+    border-radius:30px;padding:10px 22px;position:relative;
+  }
+
+  /* ===== HOOK ===== */
+  .hook{
+    background:var(--ink);color:#fff;border-radius:20px;
+    padding:30px 26px;margin:-34px 0 0;position:relative;z-index:2;
+    box-shadow:0 12px 30px rgba(21,35,59,.25);
+  }
+  .hook h2{font-size:23px;line-height:1.45;font-weight:900;}
+  .hook h2 .pop{color:var(--yellow);}
+  .hook p{margin-top:12px;font-size:15px;opacity:.92;}
+
+  /* ===== STATS ===== */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0;}
+  .stat{
+    background:#fff;border-radius:16px;padding:18px 10px;text-align:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.06);border-bottom:5px solid var(--blue);
+  }
+  .stat:nth-child(2){border-color:var(--orange);}
+  .stat:nth-child(3){border-color:var(--green);}
+  .stat .num{font-size:30px;font-weight:900;color:var(--ink);line-height:1.1;}
+  .stat:nth-child(1) .num{color:var(--blue);}
+  .stat:nth-child(2) .num{color:var(--orange);}
+  .stat:nth-child(3) .num{color:var(--green);}
+  .stat .lbl{font-size:12px;color:#555;margin-top:6px;}
+
+  /* ===== SECTION TITLE ===== */
+  .st{font-size:13px;font-weight:bold;color:var(--orange);letter-spacing:.1em;margin:46px 0 4px;}
+  .ttl{font-size:25px;font-weight:900;color:var(--ink);line-height:1.35;margin-bottom:6px;}
+  .ttl .u{background:linear-gradient(transparent 62%,var(--yellow) 62%);}
+
+  /* ===== TYPE CARDS ===== */
+  .types{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px;}
+  .type{
+    background:#fff;border-radius:18px;padding:18px 16px;
+    box-shadow:0 4px 14px rgba(0,0,0,.06);transition:transform .15s;
+    border-top:5px solid var(--c,var(--blue));
+  }
+  .type:active{transform:scale(.98);}
+  a.type{text-decoration:none;color:inherit;display:block;}
+  .type .emo{font-size:32px;line-height:1;}
+  .type h3{font-size:16px;margin:8px 0 4px;color:var(--ink);font-weight:bold;}
+  .type p{font-size:13px;color:#555;}
+  .type .more{
+    display:inline-block;margin-top:10px;font-size:12.5px;font-weight:bold;
+    color:var(--c,var(--blue));
+  }
+  .type.full{grid-column:1 / -1;}
+
+  /* ===== PUNCH (差別化トーク) ===== */
+  .punch{
+    border-radius:18px;padding:20px 20px;margin:16px 0;color:#fff;font-weight:bold;
+    display:flex;gap:14px;align-items:flex-start;box-shadow:0 6px 18px rgba(0,0,0,.12);
+  }
+  .punch .ico{font-size:30px;line-height:1;flex:none;}
+  .punch .big{font-size:18px;line-height:1.45;}
+  .punch .small{display:block;font-weight:normal;font-size:13.5px;opacity:.95;margin-top:6px;}
+  .p1{background:linear-gradient(120deg,#2769b3,#0d9488);}
+  .p2{background:linear-gradient(120deg,#f5821f,#e0367a);}
+  .p3{background:linear-gradient(120deg,#7c3aed,#2769b3);}
+
+  /* ===== TARGET CHIPS ===== */
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+  .chip{
+    background:#fff;border-radius:30px;padding:10px 16px;font-size:14px;font-weight:bold;
+    box-shadow:0 3px 10px rgba(0,0,0,.06);border:2px solid var(--green);color:var(--ink);
+  }
+  .chip:nth-child(3n+1){border-color:var(--blue);}
+  .chip:nth-child(3n+2){border-color:var(--orange);}
+  .chip:nth-child(3n+3){border-color:var(--purple);}
+
+  /* ===== QA ===== */
+  .qa{background:#fff;border-radius:16px;padding:6px 20px;margin-top:18px;box-shadow:0 4px 14px rgba(0,0,0,.06);}
+  .qa details{border-bottom:1px solid #eee;padding:14px 0;}
+  .qa details:last-child{border-bottom:none;}
+  .qa summary{font-weight:bold;color:var(--ink);cursor:pointer;list-style:none;font-size:15px;display:flex;gap:8px;align-items:center;}
+  .qa summary::-webkit-details-marker{display:none;}
+  .qa summary .q{color:var(--orange);font-weight:900;}
+  .qa summary::after{content:"＋";margin-left:auto;color:var(--blue);font-weight:900;}
+  .qa details[open] summary::after{content:"−";}
+  .qa .ans{font-size:14px;color:#444;margin-top:8px;padding-left:22px;}
+  .qa .pdfbtn{
+    display:inline-block;margin-top:12px;text-decoration:none;
+    background:linear-gradient(120deg,#f5821f,#e0367a);color:#fff;font-weight:bold;
+    font-size:13.5px;padding:10px 18px;border-radius:30px;
+    box-shadow:0 5px 14px rgba(245,130,31,.32);
+  }
+  .qa .pdfbtn:active{transform:scale(.98);}
+
+  /* ===== CTA ===== */
+  .cta{
+    display:block;text-decoration:none;text-align:center;color:#fff;margin:34px 0 10px;
+    background:linear-gradient(120deg,#1e3a8a,#0d9488,#16a34a);
+    border-radius:20px;padding:24px 20px;box-shadow:0 10px 26px rgba(13,148,136,.3);
+    transition:transform .15s;
+  }
+  .cta:active{transform:scale(.98);}
+  .cta .l1{font-size:13px;opacity:.9;}
+  .cta .l2{font-size:21px;font-weight:900;margin-top:4px;}
+  .cta .l3{font-size:12px;opacity:.85;margin-top:6px;}
+
+  footer{text-align:center;font-size:12px;color:#999;margin-top:30px;}
+
+  @media(max-width:480px){
+    .hero h1{font-size:30px;}
+    .hero .kicker{font-size:16px;padding:8px 20px;}
+    .hero .maker{padding:14px 22px;}
+    .hero .maker .dept{font-size:27px;}
+    .stat .num{font-size:24px;}
+    .ttl{font-size:21px;}
+    .types{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <span class="blob b1"></span><span class="blob b2"></span>
+    <span class="kicker">⚡ 営業向け 1分ガイド</span>
+    <h1>その水害、<br><span class="hl">板1枚</span>で止まる。</h1>
+    <p class="sub">土のうの時代は、もう終わり。<br>「浸水対策」は、これから伸びる提案ネタです。</p>
+    <div class="maker">
+      <div class="lead">この資料を作成したのは</div>
+      <div class="name">三重重工業株式会社</div>
+      <div class="dept">水門プラント部</div>
+      <div class="item">新規取扱商品 ｜ 止水板（防水板）</div>
+    </div>
+    <br>
+    <a class="herolink" href="detail.html">📘 じっくり読む「営業ハンドブック」はこちら ↗</a>
+  </div>
+
+  <div class="wrap">
+
+    <div class="hook">
+      <h2>「うちは大丈夫」が、<span class="pop">一番あぶない。</span></h2>
+      <p>ゲリラ豪雨・線状降水帯・川の氾濫——浸水は<strong>1回</strong>で在庫も設備も止まります。止水板は、その入口を<strong>物理的にせき止める</strong>シンプルで確実な備え。BCP（事業継続）の話とセットで刺さります。</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">4</div><div class="lbl">選べる方式</div></div>
+      <div class="stat"><div class="num">2,500<span style="font-size:14px;">mm</span></div><div class="lbl">最大対応水深</div></div>
+      <div class="stat"><div class="num">数分</div><div class="lbl">で設置完了</div></div>
+    </div>
+
+    <div class="st">WHAT'S THIS ?</div>
+    <div class="ttl">方式は<span class="u">4タイプ</span>。<br>現場に合わせて選べる。</div>
+    <div class="types">
+      <a class="type" style="--c:var(--blue)" href="https://taihoukinzoku.jp/stop/standard" target="_blank" rel="noopener"><div class="emo">🧱</div><h3>脱着式（金属）</h3><p>普段は外し、いざ設置。止水性が高い主力タイプ。</p><span class="more">📷 施工写真・詳細を見る ↗</span></a>
+      <a class="type" style="--c:var(--teal)" href="https://taihoukinzoku.jp/stop/sheet" target="_blank" rel="noopener"><div class="emo">📋</div><h3>シート式</h3><p>軽量・低コスト。広い間口や仮設にも。</p><span class="more">📷 施工写真・詳細を見る ↗</span></a>
+      <a class="type" style="--c:var(--orange)" href="https://taihoukinzoku.jp/stop/double" target="_blank" rel="noopener"><div class="emo">🚪</div><h3>止水ドア</h3><p>扉そのものを止水仕様に。操作いらずも。</p><span class="more">製品ページを見る ↗</span></a>
+      <a class="type" style="--c:var(--purple)" href="https://taihoukinzoku.jp/stop/buoyancy" target="_blank" rel="noopener"><div class="emo">🌊</div><h3>自動起立式（浮上式）</h3><p>水の力でひとりでに立ち上がる。無人でも作動する“ほっとけ”タイプ。</p><span class="more">製品ページを見る ↗</span></a>
+    </div>
+
+    <div class="st">WHY US ?</div>
+    <div class="ttl">そのまま使える、<span class="u">刺さるトーク</span>。</div>
+
+    <div class="punch p1">
+      <span class="ico">🎯</span>
+      <span class="big">「全方式そろってるので、現場に最適な1つを“一社で”ご提案できます」
+      <span class="small">大手シャッター系は脱着式が中心。ここが当社の強みです。</span></span>
+    </div>
+    <div class="punch p2">
+      <span class="ico">🔧</span>
+      <span class="big">「今ある扉を、そのまま“止水扉”に改修できます」
+      <span class="small">SD止水フレームなら新設より低コスト・短工期。リフォーム需要に強い。</span></span>
+    </div>
+    <div class="punch p3">
+      <span class="ico">🌊</span>
+      <span class="big">「水深2,500mmまでOK。地下も本気で守れます」
+      <span class="small">高水圧型で、地下施設・大水深の本格対策まで対応。</span></span>
+    </div>
+
+    <div class="st">WHO ?</div>
+    <div class="ttl">こんな先に、<span class="u">刺さる</span>。</div>
+    <div class="chips">
+      <span class="chip">🏭 工場・倉庫</span>
+      <span class="chip">🏢 地下施設</span>
+      <span class="chip">⚡ 電気・ポンプ室</span>
+      <span class="chip">🏬 マンション入口</span>
+      <span class="chip">🅿️ 地下駐車場</span>
+      <span class="chip">🏥 病院・データセンター</span>
+      <span class="chip">🍽️ 店舗・飲食</span>
+    </div>
+
+    <div class="st">Q &amp; A</div>
+    <div class="ttl">聞かれたら、<span class="u">こう返す</span>。</div>
+    <div class="qa">
+      <details><summary><span class="q">Q.</span> 土のうと何が違うの？</summary><div class="ans">再利用でき、設置が速く、止水性能が安定。土のうの“上位互換”の恒久対策です。</div></details>
+      <details><summary><span class="q">Q.</span> どこまで防げる？</summary><div class="ans">製品次第。樹脂は約1m、脱着式の高水圧型は水深2,500mmまで対応します。</div></details>
+      <details><summary><span class="q">Q.</span> 完全に水は入らない？</summary><div class="ans">ゼロではなくJIS A 4716の等級で管理。要求水準に合わせて選定します。</div></details>
+      <details><summary><span class="q">Q.</span> 工事せず付けられる？</summary><div class="ans">工事不要の簡易タイプあり。本格対策は専用加工や扉改修で対応します。</div></details>
+      <details><summary><span class="q">Q.</span> 補助金は使える？</summary><div class="ans">自治体・国の防災補助の対象になる場合あり。所在地で要確認です。<br><a class="pdfbtn" href="hojokin_shiryo.pdf" target="_blank" rel="noopener">📄 止水板補助金資料</a></div></details>
+    </div>
+
+    <a class="cta" href="detail.html">
+      <div class="l1">もっと詳しく知りたくなったら</div>
+      <div class="l2">📘 営業ハンドブック（本資料）へ</div>
+      <div class="l3">競合比較表・全製品ラインナップ・JIS基準・参考リンクはこちら</div>
+    </a>
+
+    <footer>三重重工業株式会社 水門プラント部 ／ 止水板 営業キャッチー版 ｜ 2026年6月<br>※ 本製品は株式会社大奉金属（福岡県）からのOEM供給品です</footer>
+  </div>
+
+</body>
+</html>
