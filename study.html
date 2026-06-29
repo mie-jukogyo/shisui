@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>🌊止水板 爆速マスター🌊 3分で読める社内研修</title>
+<style>
+:root{
+  --bg:#06131f; --bg2:#0c2235;
+  --cyan:#34c6e6; --mag:#e0567e; --yel:#f2c14e; --lime:#52d6a8; --purp:#7e8ce0; --orange:#f2884b; --blue:#3b82f6;
+  --ink:#fff;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic UI",Meiryo,"Segoe UI",sans-serif;
+  font-weight:900;line-height:1.5;
+}
+.app{max-width:480px;margin:0 auto;position:relative}
+
+/* ===== アニメ ===== */
+@keyframes neon{0%,100%{filter:drop-shadow(0 0 6px currentColor) drop-shadow(0 0 12px currentColor)}50%{filter:drop-shadow(0 0 14px currentColor) drop-shadow(0 0 24px currentColor)}}
+@keyframes wig{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes pops{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes fall{0%{transform:translateY(-12vh) rotate(0)}100%{transform:translateY(115vh) rotate(360deg)}}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+@keyframes slideup{from{opacity:0;transform:translateY(60px) scale(.9)}to{opacity:1;transform:none}}
+@keyframes flash{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* 降ってくる絵文字 */
+.rain{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;height:100%;pointer-events:none;z-index:0;overflow:hidden}
+.rain b{position:absolute;font-size:26px;animation:fall linear infinite;opacity:.5}
+
+/* ===== HERO ===== */
+.hero{position:relative;z-index:1;padding:46px 18px 54px;text-align:center;
+  background:radial-gradient(120% 80% at 50% 0%,#0c3550 0%,#06131f 70%);overflow:hidden}
+.flag{display:inline-block;background:var(--lime);color:#06231a;font-size:14px;font-weight:900;
+  padding:8px 18px;border-radius:99px;letter-spacing:.03em;animation:wig 1.4s ease-in-out infinite;transform-origin:center}
+.brand{margin:18px 0 4px;font-size:clamp(34px,11vw,58px);color:var(--cyan);animation:neon 1.8s infinite;line-height:1}
+.brand .sub{display:block;font-size:.34em;color:var(--yel);letter-spacing:.22em;margin-top:8px}
+.htitle{margin:10px 0;font-size:clamp(48px,17vw,90px);line-height:.98;letter-spacing:-.02em}
+.htitle .l1{color:var(--cyan);text-shadow:0 0 20px var(--cyan)}
+.htitle .l2{color:var(--yel);text-shadow:0 0 20px var(--yel);animation:shake 3.5s infinite}
+.htitle .l3{color:var(--lime);text-shadow:0 0 20px var(--lime)}
+.hsell{font-size:22px;margin:16px 0 6px;color:#fff}
+.hsell .hot{color:var(--orange);text-shadow:0 0 12px var(--orange)}
+.hsub{font-size:15px;color:#a9c6dd;font-weight:800}
+.cue{margin-top:26px;font-size:40px;animation:bounce 1.2s infinite}
+
+/* ===== セクション ===== */
+.sec{position:relative;z-index:1;padding:54px 18px;border-top:4px dashed rgba(255,255,255,.12)}
+.s-cyan{background:linear-gradient(180deg,rgba(52,198,230,.10),transparent)}
+.s-mag{background:linear-gradient(180deg,rgba(224,86,126,.10),transparent)}
+.s-orange{background:linear-gradient(180deg,rgba(242,136,75,.12),transparent)}
+.s-yel{background:linear-gradient(180deg,rgba(242,193,78,.10),transparent)}
+.s-lime{background:linear-gradient(180deg,rgba(82,214,168,.12),transparent)}
+
+.badge{display:inline-flex;align-items:center;gap:10px;font-size:18px;color:#06231a;
+  padding:8px 20px 8px 8px;border-radius:99px;animation:wig 2s ease-in-out infinite;transform-origin:center}
+.badge .no{width:46px;height:46px;border-radius:50%;background:#000;color:#fff;display:flex;
+  align-items:center;justify-content:center;font-size:26px}
+.b-cyan{background:var(--cyan)} .b-mag{background:var(--mag);color:#fff} .b-mag .no{color:var(--mag)}
+.b-orange{background:var(--orange);color:#fff} .b-orange .no{color:var(--orange)}
+.b-yel{background:var(--yel)} .b-lime{background:var(--lime)}
+
+.htag{font-size:clamp(34px,10vw,52px);line-height:1.05;margin:14px 0 6px}
+.htag.cyan{color:var(--cyan);text-shadow:0 0 16px rgba(52,198,230,.6)}
+.htag.mag{color:var(--mag);text-shadow:0 0 16px rgba(224,86,126,.6)}
+.htag.orange{color:var(--orange);text-shadow:0 0 16px rgba(242,136,75,.6)}
+.htag.yel{color:var(--yel);text-shadow:0 0 16px rgba(242,193,78,.6)}
+.htag.lime{color:var(--lime);text-shadow:0 0 16px rgba(82,214,168,.6)}
+.lead{font-size:17px;color:#bcd6e8;font-weight:800;margin:0 0 22px}
+
+/* キーワード超でか */
+.kw{display:block;width:100%;text-align:center;font-size:clamp(26px,7.5vw,38px);color:#06231a;
+  padding:18px 14px;border-radius:20px;margin:14px 0;box-shadow:0 8px 0 rgba(0,0,0,.5);animation:pops .6s both}
+.kw small{display:block;font-size:.5em;font-weight:800;opacity:.8;margin-top:4px}
+.k1{background:var(--cyan)} .k2{background:var(--mag);color:#fff} .k3{background:var(--lime)}
+.k4{background:var(--yel)} .k5{background:var(--orange);color:#fff} .k6{background:var(--purp);color:#fff}
+
+/* でかい煽り見出し */
+.shout{font-size:clamp(30px,9vw,46px);line-height:1.15;margin:34px 0 10px;color:#fff}
+.shout .u{color:var(--yel);text-shadow:0 0 14px var(--yel)}
+.shout .pin{color:var(--mag);font-size:1.1em}
+.txt{font-size:17px;color:#d4e4f0;font-weight:700}
+.txt b{color:var(--yel)}
+
+/* VS 縦積みカード */
+.vs{display:flex;flex-direction:column;gap:14px;margin:22px 0}
+.vsx{text-align:center;font-size:30px;color:#fff;animation:flash 1s infinite}
+.card{border-radius:22px;padding:20px;border:3px solid;background:rgba(255,255,255,.04)}
+.bad{border-color:var(--mag);box-shadow:0 0 26px rgba(224,86,126,.35)}
+.good{border-color:var(--cyan);box-shadow:0 0 26px rgba(52,198,230,.35)}
+.card h4{margin:0 0 10px;font-size:clamp(26px,7vw,36px)}
+.bad h4{color:var(--mag)} .good h4{color:var(--cyan)}
+.card p{margin:6px 0;font-size:clamp(19px,5.5vw,26px);color:#fff;line-height:1.35}
+.lose{color:var(--mag)} .win{color:var(--lime)}
+
+/* WOW バナー */
+.wow{font-size:clamp(24px,7vw,34px);text-align:center;color:#352c14;background:var(--yel);
+  border-radius:20px;padding:22px 16px;margin:24px 0;line-height:1.25;
+  box-shadow:0 0 30px rgba(242,193,78,.6);animation:neon 2s infinite}
+.wow .big{display:block;font-size:1.5em;color:var(--orange)}
+
+/* 巨大スタッツ */
+.stats{display:flex;flex-direction:column;gap:14px;margin:22px 0}
+.stat{border-radius:22px;padding:22px;text-align:center;color:#06231a}
+.stat .n{font-size:clamp(50px,16vw,80px);line-height:.9}
+.stat .n small{font-size:.35em}
+.stat .l{font-size:17px;font-weight:800;margin-top:6px}
+.st1{background:var(--blue);color:#fff}.st2{background:var(--cyan)}.st3{background:var(--orange);color:#fff}.st4{background:var(--lime)}
+
+/* ターゲット */
+.meat{display:flex;gap:10px;margin:14px 0;text-align:center;flex-wrap:wrap}
+.meat .m{flex:1 1 28%;border:3px solid rgba(255,255,255,.2);border-radius:18px;padding:14px 6px;background:rgba(255,255,255,.05)}
+.meat .ico{font-size:32px}
+.meat .l{font-size:15px;color:#fff;font-weight:800;margin-top:4px}
+
+/* JIS表 */
+.jis{width:100%;border-collapse:separate;border-spacing:6px;margin:18px 0;text-align:center}
+.jis td,.jis th{padding:14px 6px;border-radius:12px;font-size:clamp(15px,4.4vw,20px)}
+.jis th{background:var(--purp);color:#fff}.jis td{background:rgba(255,255,255,.07);color:#fff}
+.jis td:first-child,.jis th:first-child{background:rgba(255,255,255,.14)}
+.jis .hl td{background:var(--lime);color:#06231a}
+
+/* まとめチェック */
+.chk{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.05);border-radius:18px;
+  padding:18px;margin:14px 0;border:2px solid rgba(255,255,255,.12)}
+.chk .c{font-size:34px;flex-shrink:0;animation:bounce 1.6s infinite}
+.chk .t{font-size:clamp(18px,5vw,24px);color:#fff}
+.chk .t small{display:block;font-size:.7em;color:#bcd6e8;font-weight:800;margin-top:4px}
+
+.fin{font-size:clamp(34px,11vw,56px);text-align:center;color:var(--lime);
+  text-shadow:0 0 20px var(--lime);margin:20px 0;line-height:1.1;animation:neon 1.6s infinite}
+
+/* リンクボタン */
+.linkbtn{display:block;text-decoration:none;text-align:center;border-radius:20px;padding:20px 16px;margin:16px 0;
+  font-size:clamp(20px,6vw,26px);color:#06231a;box-shadow:0 8px 0 rgba(0,0,0,.5)}
+.linkbtn small{display:block;font-size:.55em;font-weight:800;opacity:.85;margin-top:6px}
+.lb1{background:var(--cyan)} .lb2{background:var(--yel)} .lb3{background:var(--lime)}
+
+.reveal{animation:slideup .7s both}
+
+footer{position:relative;z-index:1;text-align:center;padding:40px 18px;font-size:13px;
+  color:#7f9bb0;background:#040b12;font-weight:700}
+footer b{color:#fff}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- 降る絵文字 -->
+<div class="rain" id="rain"></div>
+
+<!-- HERO -->
+<header class="hero">
+  <span class="flag">✦ 営業マン向け・3分で読める社内研修 ✦</span>
+  <div class="brand">🏭 三重重工業<span class="sub">水門プラント部</span></div>
+  <h1 class="htitle">
+    <span class="l1">止水板</span><br>
+    <span class="l2">爆速</span><br>
+    <span class="l3">マスター</span>
+  </h1>
+  <p class="hsell">止水板を知らない営業マンが<br><span class="hot">“語れる人”</span>に爆変身🌊</p>
+  <p class="hsub">…って言えるようになる、ゆるい入門書📱</p>
+  <div class="cue">👇 スワイプして読め 👇</div>
+</header>
+
+<!-- イントロ -->
+<section class="sec">
+  <p class="shout reveal">「止水板やるけど、<br><span class="u">正直よく分からん</span>…」</p>
+  <p class="txt reveal">そんなあなたに朗報。<b>3つのテーマ</b>だけで、お客さんに「お、コイツ分かってるな」と思わせられる。いくぞ🚀</p>
+  <div style="margin-top:24px">
+    <a href="#c1" style="text-decoration:none"><div class="kw k1">①止水板って何？<small>土のうの上位互換</small></div></a>
+    <a href="#c2" style="text-decoration:none"><div class="kw k2">②方式は4タイプ<small>ここが当社の強み</small></div></a>
+    <a href="#c3" style="text-decoration:none"><div class="kw k3">③性能のものさし<small>JISで差がつく</small></div></a>
+  </div>
+</section>
+
+<!-- 第1章 -->
+<section class="sec s-cyan" id="c1">
+  <span class="badge b-cyan"><span class="no">1</span>テーマその①</span>
+  <h2 class="htag cyan">止水板って<br>結局なんなん🌊</h2>
+  <p class="lead">ざっくり「水をせき止める板」。でも土のうとは別格！</p>
+
+  <div class="kw k1">水を物理的にブロックする板</div>
+
+  <h3 class="shout">🆚 土のう vs 止水板</h3>
+  <div class="vs">
+    <div class="card bad">
+      <h4>🧺 土のう</h4>
+      <p>重い・積むの大変<br>👉 <span class="lose">毎回使い捨て＆止水ムラ…</span></p>
+    </div>
+    <div class="vsx">⚔️ VS ⚔️</div>
+    <div class="card good">
+      <h4>🛡️ 止水板</h4>
+      <p>再利用OK・設置数分<br>👉 <span class="win">止水性が高くて安定！</span></p>
+    </div>
+  </div>
+
+  <h3 class="shout">🔥 なんで今アツいの？</h3>
+  <p class="txt">ゲリラ豪雨・線状降水帯・川の氾濫。浸水は<b>たった1回</b>で在庫も設備もストップする。だから<b>BCP（事業継続）対策</b>として需要が伸びてる📈</p>
+  <div class="wow">「うちは大丈夫」が<span class="big">一番あぶない🌊</span>BCPの話とセットで刺さる！</div>
+
+  <div class="stats">
+    <div class="stat st2"><div class="n">2,500<small>mm</small></div><div class="l">最大対応水深（高水圧型）</div></div>
+    <div class="stat st3"><div class="n">数分<small>で</small></div><div class="l">設置完了（脱着式）</div></div>
+    <div class="stat st4"><div class="n">4<small>方式</small></div><div class="l">当社が提案できるタイプ数</div></div>
+  </div>
+</section>
+
+<!-- 第2章 -->
+<section class="sec s-mag" id="c2">
+  <span class="badge b-mag"><span class="no">2</span>テーマその②</span>
+  <h2 class="htag mag">方式は<br>4タイプ⚙️</h2>
+  <p class="lead">現場に合わせて選べる。これが当社の武器！</p>
+
+  <div class="kw k1">① 脱着式（金属）<small>主力・止水性が高い</small></div>
+  <div class="kw k2">② シート式<small>軽量・低コスト・広い間口</small></div>
+  <div class="kw k5">③ 止水ドア<small>扉ごと止水・操作不要も</small></div>
+  <div class="kw k6">④ 自動起立式<small>水の力で立つ・無人作動</small></div>
+
+  <h3 class="shout">🆚 大手と何が違う？</h3>
+  <div class="vs">
+    <div class="card bad">
+      <h4>🏢 大手シャッター系</h4>
+      <p><span class="lose">脱着式が中心</span><br>方式の選択肢が限られがち</p>
+    </div>
+    <div class="vsx">⚔️ VS ⚔️</div>
+    <div class="card good">
+      <h4>🏭 当社</h4>
+      <p><span class="win">全方式フルラインナップ</span><br>現場に最適な1つを“一社で”提案</p>
+    </div>
+  </div>
+  <div class="wow" style="background:var(--cyan);color:#06231a;box-shadow:0 0 30px rgba(52,198,230,.6)">
+    大手にはマネできない<span class="big" style="color:#06231a">全方式ワンストップ提案🏭</span>現場に最適な1つを選んであげられる！
+  </div>
+
+  <p class="txt" style="font-size:15px;background:rgba(255,255,255,.06);padding:16px;border-radius:16px">
+    ⚠️ <b style="color:#fff">ウォール型（樹脂）</b>という安い簡易タイプも市場にはあるけど、<b style="color:#fff">当社では扱っていません</b>。聞かれたら「あれは概ね1mまでの簡易品ですね」と返せばOK👌</p>
+</section>
+
+<!-- 第3章 -->
+<section class="sec s-orange" id="c3">
+  <span class="badge b-orange"><span class="no">3</span>テーマその③</span>
+  <h2 class="htag orange">性能の<br>ものさし📏</h2>
+  <p class="lead">「どれくらい止まるの？」に数字で返せると強い！</p>
+
+  <div class="kw k4">JIS A 4716</div>
+  <p class="txt"><b>漏水量</b>で <b>Ws-1（低）〜Ws-6（最高）</b> に等級化されてる。数字が大きいほど水を通さない💧</p>
+  <table class="jis">
+    <tr><th>等級</th><th>漏水量の目安</th></tr>
+    <tr><td>Ws-1</td><td>50〜200 ℓ/h・㎡</td></tr>
+    <tr><td>Ws-3前後</td><td>中位（実用ライン）</td></tr>
+    <tr class="hl"><td>Ws-6</td><td>1 ℓ/h・㎡ 以下🏆</td></tr>
+  </table>
+
+  <h3 class="shout">😎 そのまま使える<br><span class="u">殺し文句</span></h3>
+  <div class="wow" style="background:var(--mag);color:#fff;box-shadow:0 0 30px rgba(224,86,126,.6)">
+    「漏水試験データ、<span class="big" style="color:var(--yel)">公開してますか？</span>」と聞け👀
+  </div>
+  <p class="txt">これを聞くだけで、信頼できるメーカーか一発で分かる。客観的に比較もできる。デキる営業っぽい🔥</p>
+</section>
+
+<!-- 営業の裏ワザ -->
+<section class="sec s-yel">
+  <span class="badge b-yel"><span class="no">＋</span>営業の裏ワザ</span>
+  <h2 class="htag yel">どこに、<br>どう売る💰</h2>
+  <p class="lead">提案先と、刺さるトークをまとめてやる！</p>
+
+  <h3 class="shout">🎯 こんな先に刺さる</h3>
+  <div class="meat">
+    <div class="m"><div class="ico">🏭</div><div class="l">工場・倉庫</div></div>
+    <div class="m"><div class="ico">🏢</div><div class="l">地下施設</div></div>
+    <div class="m"><div class="ico">⚡</div><div class="l">電気・ポンプ室</div></div>
+    <div class="m"><div class="ico">🏬</div><div class="l">マンション入口</div></div>
+    <div class="m"><div class="ico">🅿️</div><div class="l">地下駐車場</div></div>
+    <div class="m"><div class="ico">🏥</div><div class="l">病院・DC</div></div>
+  </div>
+
+  <h3 class="shout">💬 刺さるトーク3本</h3>
+  <p class="txt">まず狙うは<b>脱着式</b>。<b>工事いらずで安く</b>始められるものもあるから、一番話が前に進む🚀</p>
+  <div class="kw k1">低コストで始められる<small>→ 簡易版なら工事も不要</small></div>
+  <div class="kw k5">普段は外しておける<small>→ 見た目も動線も邪魔しない</small></div>
+  <div class="kw k3">軽くて数分・毎年くり返し使える<small>→ 土のうより速くて確実</small></div>
+
+  <h3 class="shout">💴 補助金は使える？</h3>
+  <p class="txt">自治体・国の<b>防災・浸水対策の補助制度</b>の対象になる場合あり。所在地で要確認！背中を押す材料になる💪</p>
+  <a class="linkbtn lb2" href="hojokin_shiryo.pdf" target="_blank" rel="noopener">📄 止水板補助金資料を見る<small>法人向けPR資料（PDF）</small></a>
+
+  <p class="txt" style="font-size:15px;color:#bcd6e8">※ 価格はメーカー個別見積もり。本資料では未掲載です。</p>
+</section>
+
+<!-- まとめ -->
+<section class="sec s-lime">
+  <span class="badge b-lime"><span class="no">✓</span>ラスト</span>
+  <h2 class="htag lime">声に出して<br>言ってみ🎤</h2>
+  <p class="lead">この3つ言えたら、君はもう“語れる営業”💯</p>
+
+  <a href="#c1" style="text-decoration:none"><div class="chk"><span class="c">①</span><span class="t">止水板って何？<small>水をせき止める板。土のうの上位互換でBCPに刺さる🌊</small></span></div></a>
+  <a href="#c2" style="text-decoration:none"><div class="chk"><span class="c">②</span><span class="t">方式は？<small>脱着式・シート式・止水ドア・自動起立式の4タイプを一社で⚙️</small></span></div></a>
+  <a href="#c3" style="text-decoration:none"><div class="chk"><span class="c">③</span><span class="t">性能のものさしは？<small>JIS A 4716のWs等級。「漏水データある？」と聞け📏</small></span></div></a>
+
+  <div class="fin">これ言えたら<br>勝ち確定🌊</div>
+
+  <a class="linkbtn lb1" href="detail.html">📘 もっと詳しく：営業ハンドブック<small>競合比較・全製品・参考リンクはこちら</small></a>
+  <a class="linkbtn lb3" href="catch.html">📱 サッと見せる：キャッチー版<small>お客様・グループLINE共有用</small></a>
+</section>
+
+<footer>
+  <b>🏭 三重重工業株式会社 水門プラント部</b><br>止水板 社内研修「3分で読める止水板」／ 2026年6月<br>
+  ※ 本製品は株式会社大奉金属（福岡県）からのOEM供給品です
+</footer>
+
+</div>
+
+<script>
+// 絵文字を降らせる
+const emo=['🌊','💧','🛡️','🚪','📋','⚡','💪','💯','⭐','🏭'];
+const rain=document.getElementById('rain');
+for(let i=0;i<16;i++){
+  const b=document.createElement('b');
+  b.textContent=emo[Math.floor(Math.random()*emo.length)];
+  b.style.left=Math.random()*100+'%';
+  b.style.animationDuration=(6+Math.random()*7)+'s';
+  b.style.animationDelay=(-Math.random()*10)+'s';
+  b.style.fontSize=(18+Math.random()*22)+'px';
+  rain.appendChild(b);
+}
+// スクロール出現
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.animation='slideup .7s both';io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.kw,.vs,.wow,.stats,.meat,.jis,.chk,.shout,.htag,.linkbtn').forEach(el=>{el.style.opacity='0';io.observe(el)});
+</script>
+</body>
+</html>
